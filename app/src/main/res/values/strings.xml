@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">MyTrain</string>
+
+    <!-- id collection -->
+    <string name="id_collection_1">1</string>
+    <string name="id_collection_2">2</string>
+    <string name="id_collection_3">3</string>
+    <string name="id_collection_4">4</string>
+    <string name="id_collection_5">5</string>
+    <string name="id_collection_6">6</string>
+    <string name="id_collection_7">7</string>
+    <string name="id_collection_8">8</string>
+    <string name="id_collection_9">9</string>
+    <string name="id_collection_10">10</string>
+
+    <!-- constant for collection-->
+    <string name="train_in_gym">Тренировка в зале</string>
+    <string name="train_in_street">Тренировка на улице</string>
+    <string name="train_on_workout">Тренировка на площадке</string>
+    <string name="home_train">Тренировка дома</string>
+    <string name="train_jog">Занятие йогой</string>
+    <string name="run_train">Беговая тренировка c отслеживанием маршрута</string>
+    <string name="plane_food">План питания</string>
+    <string name="calculate_BGU">Расчет БЖУ</string>
+    <string name="level">Уровень:</string>
+    <string name="noob">Новичок</string>
+    <string name="middle">Средний уровень</string>
+    <string name="high">Профессионал</string>
+    <string name="train_program">Программа тренировок</string>
+    <string name="first_day">1-й день</string>
+    <string name="second_day">2-й день</string>
+    <string name="third_day">3-й день</string>
+    <string name="tire">-</string>
+    <string name="select_image">Выберите способ получения изображения</string>
+    <string name="open">Открыть</string>
+    <string name="camera">Камера</string>
+    <string name="gallery">Галерея</string>
+    <string name="develop_works">Раздел находится в разработке.</string>
+    <string name="see_your_soon">Скоро будет доступен!</string>
+    <string name="my_plain">Личный план</string>
+    <string name="train_different_parts">Тренировка разных частей тела</string>
+    <string name="transition_train">transition train</string>
+
+
+    <!-- constant for exercices-->
+    <string name="stretch">Разминка</string>
+    <string name="deadlift">Становая тяга</string>
+    <string name="tilt_rod_pull">Тяга штанги в наклоне</string>
+    <string name="wide_grip_pull_ups">Подтягивания широким хватом</string>
+    <string name="barbell_lift">Подъем штанги на бицепс</string>
+    <string name="press">Любое упражнение на пресс (скручивания), без отягощения, 3 отказных сета</string>
+    <string name="hitch">Заминка</string>
+    <string name="down_with_rod">Приседания со штангой</string>
+    <string name="press_legs">Жим ногами</string>
+    <string name="up_on_neck">Подъем на носках сидя</string>
+    <string name="press_down_small">Жим лежа узким хватом</string>
+    <string name="french_press">Французский жим</string>
+    <string name="press_down_huge">Жим лежа широким хватом</string>
+    <string name="press_on_branch">Отжимания на брусьях</string>
+    <string name="press_of_army">Армейский жим</string>
+    <string name="dumbbell_shrug">Разведение рук с гантелями</string>
+    <string name="gym_gantels_up">Жим гантелей стоя</string>
+    <string name="revers_arms_with_gantels">Разведение рук с гантелями лежа</string>
+    <string name="tilt_to_chin_in_down_part">Тяга к подбородку в нижнем блоке</string>
+    <string name="up_arms_on_gym">Поднятие(разведение) рук на тренажере</string>
+    <string name="right_scroll">Прямое скручивание на скамье с гантелями</string>
+    <string name="reverse_scroll">Обратное скручивание на скамье</string>
+    <string name="tilt_gantels_in_down">Тяга гантели в наклоне</string>
+    <string name="reverse_body_on_gym">Разгибания туловища на тренажере</string>
+    <string name="up_arms_with_gantels">Подъем плеч с гантелями</string>
+    <string name="reverse_push_up">Обратные отжимания</string>
+    <string name="french_gym_down">Французский жим сидя</string>
+    <string name="sgib_arms_with_gantels">Сгибания рук с гантелями сидя</string>
+    <string name="sgib_arms_with_gym">Сгибания рук со штангой</string>
+    <string name="rasgib_legs_on_gym">Разгибания ног на тренажере сидя</string>
+    <string name="mixing_legs_on_gym">Сведение ног на тренажере</string>
+    <string name="down_with_gym_on_arms">Наклоны со штангой на плечах</string>
+    <string name="step_on_the_step">Приставной шаг на степе</string>
+    <string name="jump_with_gantels">Выпрыгивания с гантелями</string>
+    <string name="press_gym_on_scum">Жим штанги на наклонной скамье</string>
+    <string name="Pullover">Пулловер</string>
+    <string name="Mixing_on_fitbol">Боковые скручивания на фитболе</string>
+    <string name="bicycle">Велосипед</string>
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>
