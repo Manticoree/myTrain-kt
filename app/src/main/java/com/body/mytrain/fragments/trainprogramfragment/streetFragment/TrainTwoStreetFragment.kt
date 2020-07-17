@@ -4,18 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import com.body.mytrain.R
 import com.body.mytrain.fragments.trainprogramfragment.BaseFragment
 import com.body.mytrain.mvp.trainstreetprogram.contract.TrainStreetProgramContract
 import com.body.mytrain.mvp.trainstreetprogram.presenter.TrainStreetProgramPresenter
-import androidx.recyclerview.widget.RecyclerView
-import butterknife.BindView
-import butterknife.ButterKnife
+import kotlinx.android.synthetic.main.train_fragment.*
 
 class TrainTwoStreetFragment : BaseFragment() {
-    @BindView(R.id.rvFirstDay)
-    internal var rvFirstDay: RecyclerView? = null
+
 
     private var trainStreetProgramPresenter: TrainStreetProgramContract.ITrainStreetProgramPresenter? = null
     private var mPage: Int = 0
@@ -32,12 +28,15 @@ class TrainTwoStreetFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.train_fragment, container, false)
-        ButterKnife.bind(this, view)
 
-        showRecyclerView(rvFirstDay!!, trainStreetProgramPresenter!!.initDataOnRecyclerView2Level())
 
 
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        trainStreetProgramPresenter?.initDataOnRecyclerView3Level()?.let { showRecyclerView(rvFirstDay, it) }
     }
 
     companion object {

@@ -4,23 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import com.body.mytrain.R
 import com.body.mytrain.constant.AppConstant
 import com.body.mytrain.fragments.trainprogramfragment.BaseFragment
 import com.body.mytrain.mvp.trainprogram.contract.TrainProgramContract
 import com.body.mytrain.mvp.trainprogram.presenter.TrainProgramPresenter
-import androidx.recyclerview.widget.RecyclerView
-import butterknife.BindView
-import butterknife.ButterKnife
+import kotlinx.android.synthetic.main.train_fragment.*
 
 class TrainThreeFragment : BaseFragment() {
-    @BindView(R.id.rvFirstDay)
-    internal var rvFirstDay: RecyclerView? = null
-    @BindView(R.id.rvSecondDay)
-    internal var rvSecondDay: RecyclerView? = null
-    @BindView(R.id.rvThirdDay)
-    internal var rvThirdDay: RecyclerView? = null
 
     private var trainProgramPresenter: TrainProgramContract.Presenter? = null
     private var mPage: Int = 0
@@ -39,16 +30,19 @@ class TrainThreeFragment : BaseFragment() {
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.train_fragment, container, false)
-        ButterKnife.bind(this, view)
-        if (position == AppConstant.ZERO) {
-            showRecyclerView(rvFirstDay!!, trainProgramPresenter!!.initDataOnRecyclerView3DayNoob())
-        } else if (position == AppConstant.ONE) {
-            showRecyclerView(rvFirstDay!!, trainProgramPresenter!!.initDataOnRecyclerView3DayMiddle())
-        } else if (position == AppConstant.TWO) {
-            showRecyclerView(rvFirstDay!!, trainProgramPresenter!!.initDataOnRecyclerView3DayPro())
-        }
 
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        if (position == AppConstant.ZERO) {
+            trainProgramPresenter?.initDataOnRecyclerView3DayNoob()?.let { showRecyclerView(rvFirstDay, it) }
+        } else if (position == AppConstant.ONE) {
+            trainProgramPresenter?.initDataOnRecyclerView3DayMiddle()?.let { showRecyclerView(rvFirstDay, it) }
+        } else if (position == AppConstant.TWO) {
+            trainProgramPresenter?.initDataOnRecyclerView3DayPro()?.let { showRecyclerView(rvFirstDay, it) }
+        }
     }
 
     companion object {

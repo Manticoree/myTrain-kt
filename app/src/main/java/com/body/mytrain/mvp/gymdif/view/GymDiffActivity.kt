@@ -2,24 +2,18 @@ package com.body.mytrain.mvp.gymdif.view
 
 import android.content.Context
 import android.os.Bundle
-
+import butterknife.ButterKnife
 import com.body.mytrain.R
 import com.body.mytrain.mainclass.BaseActivity
 import com.body.mytrain.mvp.gymdif.contract.GYMDiffContract
 import com.body.mytrain.mvp.gymdif.presenter.GYMDiffPresenter
-import com.r0adkll.slidr.Slidr
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import butterknife.BindView
-import butterknife.ButterKnife
 import eu.davidea.flexibleadapter.FlexibleAdapter
 import eu.davidea.flexibleadapter.items.IFlexible
+import kotlinx.android.synthetic.main.gym_train_layout.*
 
 class GymDiffActivity : BaseActivity(), GYMDiffContract.ViewGym {
 
-    @BindView(R.id.rvDiffGym)
-    internal var rvDiffGym: RecyclerView? = null
+
 
     private var mPresenterGYM: GYMDiffContract.PresenterGym? = null
     private val mAdapter: FlexibleAdapter<IFlexible<*>>? = null
@@ -30,8 +24,8 @@ class GymDiffActivity : BaseActivity(), GYMDiffContract.ViewGym {
         setContentView(R.layout.gym_train_layout)
         ButterKnife.bind(this)
         mContext = applicationContext
-        mContext?.let {mPresenterGYM = GYMDiffPresenter(it)}
-        showRecyclerView(rvDiffGym!!, mPresenterGYM!!.initDataOnRecyclerView())
+        mContext?.let { mPresenterGYM = GYMDiffPresenter(it) }
+        mPresenterGYM?.initDataOnRecyclerView()?.let { showRecyclerView(rvDiffGym, it) }
 
         //todo сделать отдельный поток для слайдера
         /*
